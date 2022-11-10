@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Exemplo de Formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+        <!--Value foi adicionado para mudar a cor padrão que seria preto, porem apos ter colocado value="#00ff00" Mudou para verde. 
+        Obs: Existem navegadores que não funcionam as caixas de cores, ou pode ser diferente.
+        Smepre faça o teste em multiplos navegadores principalmente componentes de formulario.
+        
+        
+        -->
+        <p>
+            <label for="inivel">Nivel de Satifação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="3">
+        </p>
+        <!--A barrinha de nivel por padrão é de 0 a 100, porem com esta pequena alteração de min e max, foi para 1 a 5
+        Para dizer de qual numeração vai começar inserimos value="E aqui dentro numero que deseja. "
+        -->
+        <p>
+            <label for="ifoto">Foto do Perfil</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+        <!--Quando for trabalahr com este tipo de aruivo você não deve trabalha com o method get, usa se o post.-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

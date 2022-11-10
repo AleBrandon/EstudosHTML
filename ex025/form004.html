@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset> <!--Grupo de campos / Pode agrupar campos semelhante EX:Otimo dados pessoas, dados escolares, dados financeiros Resumindo separando seus formularios por assuntos.-->
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="mail" id="iemail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel-national"
+                pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxxx-xxxx">
+            </p>
+        </fieldset>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        <!--
+            Expressão regular  pattern="^$" Inicio com ^    /   Final com $ ... A função que deseja é colocado no meio.
+            Ler digito => Pode ser usado \d ou [0-9] e entre as chaves coloca quanto digitos são Ex: {4}
+            No caso do exemplo acima pattern="^[0-9]{4}-[0-9]{4}$" Irá fazer a leitura do digito \d ou [0-9] Quandidade {4} - (com um traço) leitura de digito novamente, com a quantidade {4}
+            Adicionando dessa forma {4 , 5} Esta dando limite de 4 a 5 digitos
+            Utilizando o exemplo \d =>  pattern="^\d{4}-\d{4}$"
+
+             \( => Isto signific abrir parenteses.
+            Para colocar um parentese EX comppleto: \(\d{2}\) 
+
+            Estudar mais sobre RegEx => Expressões regulares
+        -->
+
+    </form>
+</body>
+</html>

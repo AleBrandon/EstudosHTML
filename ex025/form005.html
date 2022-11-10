@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Exemplo de Formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas" value="H" checked> <label for="isxmas">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem" value="F" > <label for="isxfem">Feminino</label>
+        </fieldset>
+        <!--
+            Importante
+            Esta area relacionada a sexo, quando inserimos na area name nomes diferentes EX name="mas" ou name="fem"... Na pagina HTML as duas caixar podem ser marcadas. Mas quando colocamos os nome iguais. Resolve, e só fica marcada uma.
+
+            Botoes de Radio quando se utiliza o checked, mesmo que coloque no dois, só ficara marcado um.
+            Botoes de radio tem que ter o mesmo nome para funcionar corretamente.
+
+            Se eu quiser que uma determinada caixa ja fique marcada, utilize checked na area de input.
+
+            Observar como os dados estão aparecendo na URL
+
+            
+        -->
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas" checked><label for="iesbas"> Basquete</label> <br>
+            <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label><br>
+            <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
+        </fieldset>
+        
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+        </p>
+
+    </form>
+</body>
+</html>

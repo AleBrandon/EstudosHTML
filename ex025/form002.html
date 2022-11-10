@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome de usuario" autocomplete="username"> <!--Size => tamanho da caixa, nesse caso uma caixa que cabe 10 caracteres aproximadamente. -->
+        </p>
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="minimo 8 letras" autocomplete="current-password"> <!--PlaceHolder =>(uma dica do que é para o usuario colocar.)-->
+         </p>
+        <p>
+            <input type="submit" value="Enviar"> <!--Botão Enviar-->
+            <input type="reset" value="Limpar"> <!--Botão resetar-->
+    </p>
+    </form>
+    <!--Atributos required, required minlength, maxlength referente a area de Usuario e senha.
+    requied(deixar o campo obrigatorio) indica para colocar o nome ou a senha. Aparece uma mensagem automatica.
+    required minlength determina o minimo de caractere para ser inserido na caixa, caso nãoa tinja o valor minimo uma mensagem irá aparecer.
+    required maxlength determina o maximo do caracteri aceito dentro da caixa. Se exeder uma mensagem irá aparecer. E não aceitara o envio em ambas
+
+    autocomplete="off" "on" Da uma sugestão de acorod com o historico ja inserido, ou podemos desligar esta opção também para não aparecer.
+
+    Para informarmos que a caixa usuario é relacionado ao usuario inserimos o atributo autocomplete="username" 
+    E para o campo de senha temos duas opçoes=> autocomplete= "new password": Area normalmente de cadastro, digite senha ou nova senha.
+        autocomplete="current-password"  =>  senha atual para uma tela de login, qando o usuario ja tem uma conta.
+        Obs: è importante que no campo form esteja o autocomplete on, para que a função funcione no label.
+    -->
+</body>
+</html>

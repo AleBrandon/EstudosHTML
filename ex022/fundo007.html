@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #container{
+            background-image: url(Imagens/target001.png);
+            background-size: 100% 100%;
+            position: relative; /*Topo posicionamento de um box, por padrão é relativo */
+            height: 96vh;
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo{
+            position: absolute;/*Esta tag da autoridade para que possa posiocinar como querer usando left e top.*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%; /* Movimenta do lado esquedo para direita*/
+            top: 50%; /*Movimenta da parte de cima para baixo*/
+
+            transform: translate(-50% , -50%);
+            /*Transform: Mecher em qualquer caixa, fazendo um transformação nela.
+            translate +> muda o posicionamento, mech para direita, ou esquerda.
+            */
+            
+            /*Para posicionar elemntos no meio, use esta configuração acima. */
+
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de caixa</title>
+    <style>
+        h1{
+            /*display: inline; Transformar caixa em inline*/
+           /* display: inline-block; É um inline com algumas caracteristicas de bloco, vai poder colocar tamanho e altura por exemplo, que o inline puro não pode.*/
+            background-color: grey;
+            height: 300px;
+            width: 300px;
+            border-width: 10px; /*Largura da borda*/
+            border-style: solid; /*Tipos de borda*/
+            border-color: rgb(212, 165, 11); /*Cor da borda */
+            /*border: 10px solid rgb(212, 165,11); Forma simplificada*/
+            
+            /*
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            */
+
+            /*padding: 10px 10px 10px 10px; Forma simplificada(A ordem é de um relogio se movimentando começando de cima.
+            Obs: Caso seja a mesma medida para todas, só é necessario colocar uma vez.
+            EX padding: 10px 20px;
+            E quando colocamos dois valores Cima e baixo 10px, Esquero e direto 20px
+            */
+            padding: 10px;
+
+            margin: 20px auto 40px auto; /*Para centralizar insira (auto) na margem referente a right(direita) e left(esquerda) */
+            /*
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            */
+            
+            outline-width: 5px; /*Aumentar ou diminuir o traçado*/
+            outline-style: dashed; /*Estilo do traçado*/
+            outline-color: aqua; /*Cor do traçado*/
+            
+            /*
+            Area abaixo >> outline simplificada Width(largura), style(tipo de traçado), color(cor.)
+
+            */
+
+           /* outline: 5px dashed rgb(92, 69, 240);*/
+            
+
+           /* margin:auto; Para deixar a margem centralizada automaticamente*/
+        }
+        a{
+            /*display: block; Transformar caixa em block*/
+
+            border-width: 10px; /*LArgura da borda*/
+            border-style: solid; /*Tipo ou estilo de borda*/
+            border-color: red; /*Cor da borda*/
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Paragrafos tambem são exeemplos de caixa box level, mas os <a href="#">links são exemplos de caixa inline-level</a>.Vamos ver como tudo isso funciona.</p>
+    
+    
+</body>
+</html>

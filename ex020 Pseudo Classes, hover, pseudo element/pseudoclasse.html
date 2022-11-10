@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title><!--Esta relacionado ao estado de um determinado elemento-->
+    <style>
+        div{
+            display:inline-block; /*Caixas Tudo na mesma linha*/
+            background-color: lightgray; /*Cor fundo*/
+            border: 1px solid black; /*ShortHand largura, tipo, cor */
+            text-align: center; /*Alinhamento de texto*/
+            height: 200px; /*Altura*/
+            width: 200px;/*Largura*/
+
+        }
+        div:hover{/* Quando passar o mouse sobre o espaço div, ficara amarelo o espaço. Configuração de estado*/
+            background-color: yellow; 
+        }
+
+
+
+
+        /*div#d1{
+            background-color: aqua;
+        }*/
+
+    </style>
+</head>
+<body>
+    <div id="d1">01</div> <!--A DIV é um espaço qualquer.-->
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/*em HTML é id    = em css é # (só pode um elemento)
+  em HTML é class = em css é . (pode varios elementos) 
+*/
+
+body{
+    background-color: #d6fde9;
+}
+
+h1{
+    color: 1e402f;
+}
+
+h1#principal{ /*Ou #principal usar só em um*/
+    text-align: center;
+    background-color: #3c805e;
+    color: white;
+}
+
+h2{
+    color: #3c805e;
+}
+
+h2.basico{
+    color: #3c805e;
+    font-weight: bold;
+    
+
+
+}
+
+h2.intermediario{
+    color: #80793c;
+    
+
+    
+}
+h2.avançado{
+    color: #803c3c;
+
+}
+span.importante{ /*Esta classe não esta no video, eu a criei porque não estava funcionando igual a forma que ele ensinou no video.*/
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.489);
+}
+.destaque{
+    background-color: bisque;
+}

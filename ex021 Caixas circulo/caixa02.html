@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0;
+        }
+
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+
+        }
+        
+        h1{
+            box-shadow: inset -3px -2px 20px 0px black; /*Sombra interna*/
+            
+
+        }
+
+        nav{
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315); /*1 deslocamento horizontal, 2 deslocamento vertical, 3 espalhamento, 4 Sombra  
+            Tem uma forma de inserir caixa que é utilizando o modo desenvolverdor capitulo Sombra nas caixas( Capitulo 16 Aula 5*/
+        }
+        nav > a {
+                text-decoration: none;     /*Tira a decoração o sublinhado quem vem automaticamente em links*/   
+                color: white;
+                font-weight: bold;
+                margin-right: 30px; /*Espaçamento interno entre os links. EX Link       Link      Link*/
+
+
+
+            }
+        nav > a:hover{
+            text-decoration: underline; /*Ao passar o mouse em cima, o link é selecionado, fica sublinhado, pode pode mudar de cor também só configurar para isso acontecer*/
+            
+            
+            
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px; /*Podemos colocar tb border-radius: 10px;. Será adicionado a borda em todos os lados no tamanho de 10px. Pode Tb ser colocado só dois 20px cima, baixo 40px esquerda, direita */
+            box-shadow: 4px 4px 9px 0px black;
+
+
+        }
+        article{
+            background-color: lightgray;
+        }
+        article > aside{
+            background-color: rgb(165, 165, 165);
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        div#bola{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%; /*Podemos usar tb porgentagem para indicar o nivel de borda que desejamos.*/
+        }
+        
+    </style>
+</head>
+<body>
+    <header><!--Cabeçalho(é uma div) Semantica-->
+        <h1>Meu site</h1>
+        <nav> <!--Menu-->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+
+        </nav>
+    </header>
+
+    <main> <!--Conteudo principal(é uma div)Semantica-->
+            <section id="assuntos"> <!--Seção-->
+                    <p>Esporte Politica Tecnologia</p>
+            </section>
+            <section id="noticias">
+                <article> <!--Artigo-->
+                    <h2>Noticia sobre o Brasil</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat in alias, ipsum voluptas, assumenda ducimus iure, at nam similique id nulla officia ea provident dicta delectus excepturi ratione sint fuga!
+                    </p>
+                    <aside> 
+                        <p>Com a mentoria do Gustavo Guanabara</p>
+                       
+                    </aside><!--Conteudo periferico ao artigo ou relativo ao artigo. Por exemplo pode ser colocado o nome do autor-->
+
+                </article>
+                <article>
+                <h2>Paragrafo 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore iure voluptates minima corrupti aliquid qui obcaecati eaque ullam, tempora blanditiis facilis cumque iusto, assumenda repudiandae. Unde quaerat expedita odit sed.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum dolorum vel earum laborum fuga praesentium ratione optio aliquid, dolorem ad voluptatum labore nam neque provident. Eius cumque error eos laudantium.
+                </p>
+                </article>
+
+            </section>
+    </main>
+    <footer><!--Rodapé uma div, semantica-->
+        <p>Desenvolvido por Aleisson Brandon A S</p>
+    </footer> 
+    <div id="bola"></div>
+</body>
+</html>

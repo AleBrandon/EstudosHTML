@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            background-color: brown;
+            text-align: center;
+            width: 480px;
+            padding: 10px;
+            margin: 0px;
+        }
+
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+            
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: greenyellow;
+        }
+
+        thead, tfoot{
+            background-color: #383838;
+            color: white;
+
+        }
+        
+        thead > tr > th{
+            position: sticky; /*Colou esta o th na parte de cima, quando uso a barra de rolagem o cabeçalho (th) fica fixo não some.*/
+            top: -1px; /*Area de ajuste, para fixa*/
+            background-color: #383838; /*Cor de fundo, precisa colocar se não fica só as palavras meio incolor.*/
+            /*Após a tabela acabar, e no site ter mais conteudo, a tabela some e o usuario pode continuar consumindo o conteudo.*/
+        }
+
+        tbody > tr:nth-child(odd){ /*2n-1*/
+            background-color: aqua;
+        }
+        tbody > tr:nth-child(even){ /*2n*/
+            /*Este é uma peseudoclasse que faz com que a tabela fique zebrada. De 2 em 2 ele vai colocando um taxa cinza. Pode tb usar (odd (impar) => No lugar de 2n, para fazer com que muda a cor, só os impares. Tem tb 2n-1*, even(par) também que é par, */
+            background-color: yellow;
+        }
+
+        td.num{
+            text-align: right;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+
+    <!--Anatomia das Tabelas grandes
+        Table
+            CAPTION (LEGENDA DA TABELA)
+             Head
+                TR, TD, TH
+             TBODY
+                TR, TD, TH
+             TFOOT
+                TR, TD, TH
+    -->
+
+    <table> <!-- Semantica Tabela-->
+        <caption>População das unidades federativas</caption>
+        <thead> <!--Cabeça da tabela-->
+            <tr>
+                <th scope="col">Estado</th> <!--Cabeçalho-->
+                <th scope="col" style="width: 100px;">População</th> <!--Para destacar que este é um titulo de coluna usar scope="col" Como esta acima.-->
+            </tr>
+
+        </thead>
+        <tbody> <!--Corpo da Tabela--> 
+          <tr> <!--Primeira linha--> 
+            <td>São Paulo</td> <!--Dado da tabela-->
+            <td class="num">45 919 049</td>
+          </tr>
+          <tr>
+            <td>Minas Gerais</td>
+            <td class="num">21 168 791</td>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 873 064</td>
+                
+            </tr>
+            <tr>
+                <td>Parana</td>
+                <td class="num">11 433 957</td>
+
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">113 772 39</td>
+            </tr>
+            <tr>
+                <td>Pernabuco</td>
+                <td class="num">9 557 071</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17 264 943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 873 064</td>
+                    
+                </tr>
+                <tr>
+                    <td>Parana</td>
+                    <td class="num">11 433 957</td>
+    
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">113 772 39</td>
+                </tr>
+                <tr>
+                    <td>Pernabuco</td>
+                    <td class="num">9 557 071</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21 168 791</td>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td class="num">17 264 943</td>
+                    </tr>
+                    <tr>
+                        <td>Bahia</td>
+                        <td class="num">14 873 064</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Parana</td>
+                        <td class="num">11 433 957</td>
+        
+                    </tr>
+                    <tr>
+                        <td>Rio Grande do Sul</td>
+                        <td class="num">113 772 39</td>
+                    </tr>
+                    <tr>
+                        <td>Pernabuco</td>
+                        <td class="num">9 557 071</td>
+                    </tr>
+        </tbody>
+        <tfoot> <!--Pé da tabela-->
+            <tr>
+                <th scope="row">Total de Habitantes</th><!--Para destacar que é o titulo da linha-->
+                <td class="num">900.100.200</td>
+            </tr>
+
+        </tfoot>
+    </table>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque minus sequi minima nulla eveniet adipisci illo dolore dignissimos molestiae hic, accusamus beatae. Dolores odit doloremque deleniti nobis magnam, recusandae quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quidem veniam consectetur culpa maxime sapiente voluptate consequuntur ex cumque! Iusto inventore similique sequi odit nisi autem velit itaque non et. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis aut vero ratione nostrum hic delectus nobis ab sed iste perspiciatis, dicta voluptate debitis laboriosam aliquam maiores architecto quas ea nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a consequuntur quibusdam quisquam voluptates cum minima dicta nisi sed similique. Adipisci sunt voluptates nesciunt aut similique quibusdam rerum rem obcaecati.
+
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque minus sequi minima nulla eveniet adipisci illo dolore dignissimos molestiae hic, accusamus beatae. Dolores odit doloremque deleniti nobis magnam, recusandae quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quidem veniam consectetur culpa maxime sapiente voluptate consequuntur ex cumque! Iusto inventore similique sequi odit nisi autem velit itaque non et. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis aut vero ratione nostrum hic delectus nobis ab sed iste perspiciatis, dicta voluptate debitis laboriosam aliquam maiores architecto quas ea nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a consequuntur quibusdam quisquam voluptates cum minima dicta nisi sed similique. Adipisci sunt voluptates nesciunt aut similique quibusdam rerum rem obcaecati.
+
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque minus sequi minima nulla eveniet adipisci illo dolore dignissimos molestiae hic, accusamus beatae. Dolores odit doloremque deleniti nobis magnam, recusandae quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quidem veniam consectetur culpa maxime sapiente voluptate consequuntur ex cumque! Iusto inventore similique sequi odit nisi autem velit itaque non et. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis aut vero ratione nostrum hic delectus nobis ab sed iste perspiciatis, dicta voluptate debitis laboriosam aliquam maiores architecto quas ea nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a consequuntur quibusdam quisquam voluptates cum minima dicta nisi sed similique. Adipisci sunt voluptates nesciunt aut similique quibusdam rerum rem obcaecati.
+
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque minus sequi minima nulla eveniet adipisci illo dolore dignissimos molestiae hic, accusamus beatae. Dolores odit doloremque deleniti nobis magnam, recusandae quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quidem veniam consectetur culpa maxime sapiente voluptate consequuntur ex cumque! Iusto inventore similique sequi odit nisi autem velit itaque non et. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis aut vero ratione nostrum hic delectus nobis ab sed iste perspiciatis, dicta voluptate debitis laboriosam aliquam maiores architecto quas ea nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a consequuntur quibusdam quisquam voluptates cum minima dicta nisi sed similique. Adipisci sunt voluptates nesciunt aut similique quibusdam rerum rem obcaecati.
+
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque minus sequi minima nulla eveniet adipisci illo dolore dignissimos molestiae hic, accusamus beatae. Dolores odit doloremque deleniti nobis magnam, recusandae quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quidem veniam consectetur culpa maxime sapiente voluptate consequuntur ex cumque! Iusto inventore similique sequi odit nisi autem velit itaque non et. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis aut vero ratione nostrum hic delectus nobis ab sed iste perspiciatis, dicta voluptate debitis laboriosam aliquam maiores architecto quas ea nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a consequuntur quibusdam quisquam voluptates cum minima dicta nisi sed similique. Adipisci sunt voluptates nesciunt aut similique quibusdam rerum rem obcaecati.
+
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque minus sequi minima nulla eveniet adipisci illo dolore dignissimos molestiae hic, accusamus beatae. Dolores odit doloremque deleniti nobis magnam, recusandae quasi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quidem veniam consectetur culpa maxime sapiente voluptate consequuntur ex cumque! Iusto inventore similique sequi odit nisi autem velit itaque non et. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis aut vero ratione nostrum hic delectus nobis ab sed iste perspiciatis, dicta voluptate debitis laboriosam aliquam maiores architecto quas ea nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a consequuntur quibusdam quisquam voluptates cum minima dicta nisi sed similique. Adipisci sunt voluptates nesciunt aut similique quibusdam rerum rem obcaecati.
+
+    </p>
+
+    
+</body>
+</html>

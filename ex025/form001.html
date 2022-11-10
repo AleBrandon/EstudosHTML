@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off"> <!--Retirar as o historico de nomes ou sobrenosmes que foram inserirdos.-->
+        <p><label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome"><p>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome"id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+        
+
+    </form>
+
+    <!--
+            Botão enviar, usa se submit => que siginificaenviar. Value => Area direcionada para inserir umnome.
+            ---------------------------------------------------------
+            Para enviar as informações do formulario para o banco de dados.
+            Use action como esta logo acima. E o botão submit para eviar os dados.
+            ---------------------------------------------------------
+            Utilização de Labels(estiquetas) É importante para fazer a conexão entre o nome e a caixa vazia (onde o usuario inseri nome ou o sobrenome, no caso do nosso exemplo) 
+            EX: <label for="inome">
+
+            Conexões com HTML, PHP, JavaScript para mecanismos de busca também.
+            name=" " que é mais util para HTML e PHP
+            id=" " Java script, importante para fazer a relação com Label.
+            
+            Dois tipos de metodos para envio de formularios.
+            metodo(method) é o GET..Por padrão quando não coloca nada é GET. 
+            method => É o que fica na URL. EX: 'file:///C:/Users/aleis/Documents/Estudos%20HTML/html5/ex025/form001.html?nome=&sobrenome='
+            
+            Temos também o method POST EX: 'file:///C:/Users/aleis/Documents/Estudos%20HTML/html5/ex025/cadastro.php' (Observe que com o metodo post, as informações que foram inseridas em nosso formulario sumiu.)
+
+            Quando usar method GET ou Post. 
+            Em situações que os dados que forem pedidos, não sej tão importantes method Get(também para que link possa ser compartilhado), quando for algo que não pode ser compartilhado usa se Post(dados sensiveis). 
+            O professor Guanabara inseriu como exemplo de explicação o GOOGLE.
+
+            Obs: Quando envia dados por Get, só pode enviar até 3000 bytes(aproximadamente 3000 letras.)
+            Post
+            Passar de 3000bytes
+            Para envio de arquivos
+            Dados sensiveis EX: informações de cartão de credito, senha.
+            No futuro estudar HTTPS para proteger dados.
+
+            
+
+        -->
+
+
+    
+</body>
+</html>

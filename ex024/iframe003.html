@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframest</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #tela{
+        width: 95vw;
+        height: 400px;
+        border: 2px solid black;
+        
+    }
+</style>
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae sint cum quis repudiandae, laudantium facilis nulla, culpa atque deleniti aspernatur quia nisi aliquam! Repellendus modi iusto tempore doloremque maxime quisquam.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira Pagina</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda Pagina</a></li>
+        <li><a href="paginas-extras/pag003.html" target="frame">Terceira Pagina</a></li>
+
+    </ul>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sunt neque fugit officiis quas soluta autem consequatur consectetur in, amet non expedita adipisci inventore quam, odit delectus quaerat necessitatibus atque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, eligendi minima? Tenetur pariatur itaque tempore ab voluptatem mollitia, natus vitae obcaecati cum debitis architecto a reprehenderit. Accusamus dolor quae omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus praesentium commodi eius recusandae tenetur neque quidem deleniti error, illum explicabo voluptate repellat? Eos totam commodi quam labore vitae ipsa provident.</p>
+    
+    <iframe srcdoc=" <h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus sunt neque fugit officiis quas soluta autem consequatur consectetur in, amet non expedita adipisci inventore quam, odit delectus quaerat necessitatibus</p> <img src='Imagens/cursoemvideo.png'>  " id="tela" name="frame"> <!--Elemento name, faz com que, utilizando o target na area de links,. Podemos inserir uma informação dentor do iframe.
+    Aspas simples no img porque tudo esta dentro de aspas duplas.
+    -->
+        <p>Infelizmente seu navegador não é compativel com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit porro repudiandae, vero facilis dolorem iste eaque, numquam, aliquid ipsum placeat aspernatur totam aut est minus. Quod placeat illo saepe id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, natus ex! Quisquam impedit facilis dolore totam debitis ut. Nesciunt iusto molestiae aliquam perferendis officiis, vitae rerum reiciendis. Dolorum, vel assumenda!</p>
+</body>
+</html>

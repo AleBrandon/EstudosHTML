@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style> /*As configuraçãoes que são prorizadas, são aquelas dentro da folha de estilo. */
+        iframe{
+            width: 400px;
+            height: 400px;
+            border: 10px dashed green; /*Borda pode ser adiconado ao iframe, usando a folha de estilos.*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de um iframe</h1>
+    <p>Acessando o site do 
+        <!--Tamanho padrão do iframe 300x150 / Iframes tambem são inline-->
+        
+        <iframe src="https://www.cursoemvideo.com/curso/curso-html5-e-css3-modulo-4-de-5-40-horas/aulas/modulo-04-2/modulos/capitulo-22-aula-1-o-iframe-ainda-pode-ser-usado/" frameborder="0" height="500px" width="500px" scolling="no"></iframe> <!--Exemplo de configuração pontual. / Parâmetro scoling="auto (padrão), yes(mesmo que o conteudo estivesse cabendo todo no iframe, iria aparecer a barra de rolagem.), no(não permitir fazer a rolagem)" Porem este exemplo não funcionou em meu navegador e nem no do curso em video.-->
+        
+        curso em video para aprender a programar</p>
+
+        <p>O site do 
+            <iframe src="https://www.google.com.br" frameborder="0">
+                <a href="https://www.google.com.br"></a>
+            </iframe>
+            tambem é muito legal</p> <!--Existem alguns sites, que são protegidos para que  o seu conteudo não seja exibido em iframes, é o caso da google. frameborder só aceita 0 ou 1...Ou sej com borda ous em borda.-->
+
+        <p>
+            O repositorio do Guanabara
+
+            <iframe src="https://gustavoguanabara.github.io" frameborder="0">
+                no <a href="https://gustavoguanabara.github.io" target="_blank">Github</a> <!--Inserir um link, caso um navegador não seja compativel com o Iframe, ira aparecer link...É bom deixar um mesnagem tb. -->
+            </iframe>
+
+            é bem legal!
+
+
+        </p>
+    
+</body>
+</html>

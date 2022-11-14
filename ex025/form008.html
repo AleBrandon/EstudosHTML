@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Exemplode formularios</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Número 2: </label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <!--Tag de formulario para soma.
+            <output name="soma" id="isoma">0</output>
+            utiliza se tambem 
+            oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            Exeplicando: isoma é a area do output / o HTML que esta dentro / valor dentro de n1 + valor dentro de n2. E ai ele vai soma os dois.
+            output não é pra enviar.. 
+            è para mostrar coisas na tela.
+        -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+
+                <option value="" selected>---Escolha---</option> <!--Para aparecer na area de opção.-->
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP" >São Paulo</option>
+                </optgroup>
+
+                <!--Para selecionar uma uma cidade especifica para aparecer na pagina, utilize "<option value="SP" selected>São Paulo</option>" .-->
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option >Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option >Professor</option>
+                <!--Se preferi també, funciona sem o value-->
+            </datalist>
+        </p>
+        <p>
+            <label for="imsg">Mensagem: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
+            <!--Quantas colunas(cols) e quantas linhas(rows) vão aprecer na TELA. POrem pode escrever infinito.
+            Quando utiliza se a tag testarea => utilizase o method="post" Porque o formulario get tem um maximo de 3000bytes para enviar.
+                    
+            -->
+        </p>
+        
+        
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <!--Usa se geralmente paragrafos ou divs, para trabalhar com label, input-->
+</body>
+</html>
